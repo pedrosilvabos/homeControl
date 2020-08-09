@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/lamp/{id}', function ( $id) {
-    return $id;
+Route::get('/lamp', function (Request $request) {
+Route::get('/lamp', function (Request $request) {
+    return "1";
 });
 
