@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/on', function (Request $request) {
-    return "1";
+Route::get('/lamp/{id}', function ( $id) {
+    return $id;
 });
-Route::get('/off', function (Request $request) {
-    return "0";
-});
+
