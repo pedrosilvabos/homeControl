@@ -53,7 +53,7 @@ return [
             'password' => env('DB_PASSWORD', '0811d382'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8',
-            'collation' => 'utf8composer require laravel/uicomposer require laravel/ui_unicode_ci',
+            'collation' => 'utf8_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
