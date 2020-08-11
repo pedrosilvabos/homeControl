@@ -14,7 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/lamp', function (Request $request) {
-    return "0";
-});
+Route::apiResource('lamp','api\lampController');
 
