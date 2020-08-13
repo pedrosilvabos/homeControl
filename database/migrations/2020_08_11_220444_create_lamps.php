@@ -15,7 +15,7 @@ class CreateLamps extends Migration
     {
           Schema::create('lamps', function (Blueprint $table) {
                    $table->id();
-                   $table->boolean('status');
+                   $table->boolean('status')->default(0);
                    $table->timestamps();
                });
     }

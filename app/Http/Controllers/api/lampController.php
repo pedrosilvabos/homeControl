@@ -24,7 +24,8 @@ class lampController extends Controller
      */
     public function create()
     {
-        //
+      $lamp = App\Lamp::create(['status' => '1']);
+
     }
 
     /**
@@ -35,7 +36,11 @@ class lampController extends Controller
      */
     public function store(Request $request)
     {
-        Lamp::create($request->all);
+          $lamp = new Lamp([
+                    'status' => '1',
+
+                ]);
+                $lamp->save();
     }
 
     /**
@@ -69,8 +74,9 @@ class lampController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $lamp = Lamp::findOrFail($id);
-         $lamp->update($request->all);
+         $lamp = Lamp::find($id);
+         $lamp->status =  1;
+         $lamp->save();
     }
 
     /**
