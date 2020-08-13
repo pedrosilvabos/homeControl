@@ -77,8 +77,10 @@ class lampController extends Controller
     public function update(Request $request, $id)
     {
          $lamp = Lamp::find($id);
-         if($lamp['status'] == 1){
-            $lamp['status'] = 0
+         echo $lamp['status'];
+         if($lamp['status'] == 1)
+         {
+            $lamp['status'] = 0;
          }else{
             $lamp->status =  1;
          }
