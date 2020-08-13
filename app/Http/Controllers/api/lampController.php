@@ -51,7 +51,9 @@ class lampController extends Controller
      */
     public function show($id)
     {
-        return Lamp::findOrFail($id);
+        $lamp = Lamp::findOrFail($id);
+        $retval = $lamp['status'];
+        return $retval;
     }
 
     /**
