@@ -36,7 +36,7 @@ class lampController extends Controller
      */
     public function store(Request $request)
     {
-      $lamp = App\Lamp::create(['status' => '1']);
+      $lamp = App\Lamp::create();
     }
 
     /**
