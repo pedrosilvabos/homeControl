@@ -1,6 +1,6 @@
 
 
-@section('content')
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -27,25 +27,23 @@
         </tr>
         @foreach ($lamps as $lamp)
         <tr>
-            <td>{{ ++$i }}</td>
+
 
             <td>
-                <form action="{{ route('lamp.destroy',$lamp->id) }}" method="POST">
+                <form action="{{ route('lamp.update',$lamp->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('lamp.show',$lamp->id) }}">Show</a>
+
 
 
 
                     @csrf
-                    @method('DELETE')
+                    @method('PUT')
 
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">on/off</button>
                 </form>
             </td>
         </tr>
         @endforeach
     </table>
 
-    {!! $lamps->links() !!}
 
-@endsection

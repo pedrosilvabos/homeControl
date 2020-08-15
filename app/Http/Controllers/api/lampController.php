@@ -14,10 +14,10 @@ class lampController extends Controller
      */
     public function index()
     {
-        $lamps = Lamp::latest()->paginate(5);
+        $lamps = Lamp::all();
 
-               return view('lamp.index',compact('lamps'))
-                   ->with('i', (request()->input('page', 1) - 1) * 5);
+               return view('lamp.index',compact('lamps'));
+
     }
 
     /**
