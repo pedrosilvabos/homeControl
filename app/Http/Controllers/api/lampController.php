@@ -14,7 +14,10 @@ class lampController extends Controller
      */
     public function index()
     {
-        return Lamp::all();
+        $lamps = Lamp::latest()->paginate(5);
+
+               return view('lamp.index',compact('lamps'))
+                   ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -36,7 +39,7 @@ class lampController extends Controller
      */
     public function store(Request $request)
     {
-      $lamp = Lamp::create(['status' => '1']);
+    Lamp::create();
     }
 
     /**
