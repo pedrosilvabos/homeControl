@@ -27,18 +27,10 @@
         </tr>
         @foreach ($lamps as $lamp)
         <tr>
-
-
             <td>
                 <form action="{{ route('lamp.update',$lamp->id) }}" method="POST">
-
-
-
-
-
-                    @csrf
+                  @csrf
                     @method('PUT')
-
                     <button type="submit" class="btn btn-danger">on/off</button>
                 </form>
             </td>

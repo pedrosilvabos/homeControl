@@ -85,6 +85,9 @@ class lampController extends Controller
          }
 
          $lamp->save();
+         $lamps = Lamp::all();
+
+         return view('lamp.index',compact('lamps'));
     }
 
     /**
