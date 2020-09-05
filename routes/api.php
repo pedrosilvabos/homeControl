@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::apiResource('lamp','api\lampController');
-
+Route::get('time','api\TimeController@index')->name('currentTime');

@@ -34,6 +34,9 @@
                     <button type="submit" class="btn btn-danger">on/off</button>
                 </form>
             </td>
+            <td>
+
+            </td>
         </tr>
         @endforeach
     </table>

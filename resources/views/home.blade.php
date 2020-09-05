@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-<a href="{{ route('lamp.index') }}">Lamps</a>
+
                     {{ __('You are logged in!') }}
                 </div>
             </div>
