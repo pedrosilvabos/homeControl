@@ -49,7 +49,6 @@ class TimeController extends Controller
                 if (empty($isInSavingTime))
                 {
                     $retVal = array_search($timezone, $savingHours);
-                    echo $myTime;
                     return $retVal;
                     break;
                 }
